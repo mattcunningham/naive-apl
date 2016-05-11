@@ -16,7 +16,7 @@ b ← {
   b ← {⍵,q←' '}  ⍝ add space after ⍵
   η ← {'',a∊b¨(⍵=1⊃¨∆)/0⊃¨∆}  ⍝ find all words in a group (⍵) of the training data
   d ← {  ⍝ scoring
-    e← (⍴η⍺)÷((⍴η0)+(⍴η1)) ⍝ percent of group in total training data
+    e← (⍴η⍺)÷((⍴η 0)+(⍴η 1)) ⍝ percent of group in total training data
     o←({+/(a∊b¨0⊃¨∆)∊⍵ ""}¨a⍵)  ⍝ sum of members of testing data in training data
     e××/(1E¯10+((⍺{+/¨(⍺{(η⍺)∊⍵ ''}¨(a⍵))}⍵)÷(⍴η⍺))×o)÷(1+o)  ⍝ (assumed + (percent of specific group ÷ total words in group) × total) ÷ (weight+total)
   }
