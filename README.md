@@ -5,6 +5,11 @@
 ## About
 This is a *simple* naive bayesian classifier to gain independent probabilistic assumptions on test input. The classifier requires precisely *2* groups with training data. This is just a fun side project I did over the weekend, but any contributions would be **fantastic**.
 
+There are three files in this repository — each file works on its own:
+* *bayes.min.apl* - This is the completely minified version.
+* *bayes.apl* - This file isn't as obfuscated as the minified version, but it still follows conventional minified APL practices.
+* *bayes.full.apl* - Fully documented
+
 ## Example
 This example shows the classifier displaying the independent probabilistic assumptions on whether given text aligns with keywords of *two* different animals: *cat* or *dog*.
 
