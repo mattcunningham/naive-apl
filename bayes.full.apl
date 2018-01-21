@@ -4,7 +4,7 @@
 ⍝ http://www.opensource.org/licenses/mit-license
 ⍝
 ⍝ Format:
-⍝   ("training text" 0) ("training text" 1) b "text to be classified"
+⍝   ('training text' 0) ('training text' 1) b 'text to be classified'
 ⍝
 ⍝ Output:
 ⍝   The indexes correspond to the group assignment during training.
@@ -33,7 +33,7 @@ b ← {
     space_sep ← {⍵⊂⍨~⍵∊' '}  ⍝ Separates words from a string vector into a string array
     all_words ← 0⊃¨training_data  ⍝ Finds all the words in the training data.
     add_space ← {⍵,q←' '}  ⍝ Adds after space after the argument
-    +/(space_sep ∊ add_space ¨ all_words)∊⍵ ""  ⍝ Return: Sum of instances a word of as member of the training data.
+    +/(space_sep ∊ add_space ¨ all_words)∊⍵ ''  ⍝ Return: Sum of instances a word of as member of the training data.
   }
 
   ⍝ Finds the total sum of instances of membership of each word in a group of the training data.
